@@ -69,6 +69,13 @@ public class CorsoJava {
          * in quanto condividono la stessa area di
          * memoria.
          */
+        //Overload dei costruttori
+        Persona p = new Persona("Mario", "Rossi");
+        p.denominazione();
+        //Blocc static
+        Static s1 = new Static();
+        Static s2 = new Static();
+        s1.view();
     }
     
 }

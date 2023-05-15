@@ -10,13 +10,18 @@ public class Persona {
     
     private static int contatore;
     
-    /*--Costruttore che crea ed inizializza gli attributi
+    /*--Costruttore che crea l'oggetto ed inizializza gli attributi
      * della classe Persona.
     */
     public Persona(String nome, String cognome, int anni){
         this.nome = nome;
         this.cognome = cognome;
         this.anni = anni;
+    }
+    //Overload dei costruttori
+    public Persona(String nome, String cognome){
+
+        this(nome,cognome,23);
     }
     public void denominazione(){
         System.out.println("Creato Persona di nome, cognome e anni " + this.nome + " " + this.cognome + " " +this.anni);
