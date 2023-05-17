@@ -4,6 +4,7 @@ import it.corso.java.datatype.*;
 import it.corso.java.operatori.*;
 import it.corso.java.controllodiflusso.*;
 import it.corso.java.classi.*;
+import it.corso.java.array.*;
 
 
 public class CorsoJava {
@@ -12,8 +13,9 @@ public class CorsoJava {
         /*CorsoJava.variabili();
         CorsoJava.dataType();
         CorsoJava.operatori();
-        CorsoJava.controlloDiFlusso();*/
-        CorsoJava.testClassi();
+        CorsoJava.controlloDiFlusso();
+        CorsoJava.testClassi();*/
+        CorsoJava.testArray();
     }
 
     public static void variabili(){
@@ -76,6 +78,11 @@ public class CorsoJava {
         Static s1 = new Static();
         Static s2 = new Static();
         s1.view();
+    }
+
+    public static void testArray(){
+        Array.arrayPersone();
+        Array.arrayBidimensionale();
     }
     
 }
