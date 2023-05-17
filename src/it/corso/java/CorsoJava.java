@@ -78,6 +78,7 @@ public class CorsoJava {
         Static s1 = new Static();
         Static s2 = new Static();
         s1.view();
+        s2.view();
     }
 
     public static void testArray(){
