@@ -84,6 +84,15 @@ public class CorsoJava {
     public static void testArray(){
         Array.arrayPersone();
         Array.arrayBidimensionale();
+        MyClass mc = new MyClass();
+        mc.varargs(2, true,'a','b','c','o','p');
+        mc.varargs( 7, false, 'e','f','g','h');
+        mc.varargs(34, true, 'l','m','n');
+        Overload ov = new Overload();
+        ov.varargs(2,3,4,5,6);
+        ov.varargs(10.90,67.890,78.89);
+        ov.varargs();/*? Non va in errore ma non richiama
+        alcun metodo. */
     }
     
 }
