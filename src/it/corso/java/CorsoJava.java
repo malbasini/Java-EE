@@ -91,8 +91,8 @@ public class CorsoJava {
         Overload ov = new Overload();
         ov.varargs(2,3,4,5,6);
         ov.varargs(10.90,67.890,78.89);
-        ov.varargs();/*? Non va in errore ma non richiama
-        alcun metodo. */
+        ov.varargs();/*??? Non va in errore ma non entra nel loop 
+        chiamando il primo metodo in overload. */
     }
     
 }
