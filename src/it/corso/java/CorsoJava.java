@@ -5,6 +5,7 @@ import it.corso.java.operatori.*;
 import it.corso.java.controllodiflusso.*;
 import it.corso.java.classi.*;
 import it.corso.java.array.*;
+import it.corso.java.stringhe.*;
 
 
 public class CorsoJava {
@@ -14,8 +15,9 @@ public class CorsoJava {
         CorsoJava.dataType();
         CorsoJava.operatori();
         CorsoJava.controlloDiFlusso();
-        CorsoJava.testClassi();*/
-        CorsoJava.testArray();
+        CorsoJava.testClassi();
+        CorsoJava.testArray();*/
+        CorsoJava.testStringhe();
     }
 
     public static void variabili(){
@@ -93,6 +95,11 @@ public class CorsoJava {
         ov.varargs(10.90,67.890,78.89);
         ov.varargs();/*??? Non va in errore ma non entra nel loop 
         chiamando il primo metodo in overload. */
+    }
+
+    public static void testStringhe(){
+        Stringhe s = new Stringhe();
+        s.methodString();
     }
     
 }
