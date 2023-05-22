@@ -6,6 +6,7 @@ import it.corso.java.controllodiflusso.*;
 import it.corso.java.classi.*;
 import it.corso.java.array.*;
 import it.corso.java.stringhe.*;
+import it.corso.java.ereditarieta.*;
 
 
 public class CorsoJava {
@@ -16,8 +17,9 @@ public class CorsoJava {
         CorsoJava.operatori();
         CorsoJava.controlloDiFlusso();
         CorsoJava.testClassi();
-        CorsoJava.testArray();*/
-        CorsoJava.testStringhe();
+        CorsoJava.testArray();
+        CorsoJava.testStringhe();*/
+        CorsoJava.testEreditarieta();
     }
 
     public static void variabili(){
@@ -100,6 +102,14 @@ public class CorsoJava {
     public static void testStringhe(){
         Stringhe s = new Stringhe();
         s.methodString();
+    }
+
+    public static void testEreditarieta(){
+        
+        /*Creo l'oggetto Studente */
+        Studente studente = new Studente("Mario", "Rossi", 24, "Giurisprudenza", 2);
+        System.out.println(studente.denominazione());
+        
     }
     
 }

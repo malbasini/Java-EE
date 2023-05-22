@@ -23,8 +23,8 @@ public class Persona {
 
         this(nome,cognome,23);
     }
-    public void denominazione(){
-        System.out.println("Creato Persona di nome, cognome e anni " + this.nome + " " + this.cognome + " " +this.anni);
+    public String denominazione(){
+        return ("nome, cognome e anni " + this.nome + " " + this.cognome + " " +this.anni);
     }
 
     public String getNome(){
