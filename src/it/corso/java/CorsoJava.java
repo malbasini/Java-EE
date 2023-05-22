@@ -55,7 +55,7 @@ public class CorsoJava {
         Persona.incrementa();
         Persona p2 = new Persona("Luigi","Bianchi",41);
         Persona.incrementa();
-        p1.denominazione();
+        System.out.println(p1.denominazione());
         Persona.numeroIstanze();
         /*Vediamo i reference */
         System.out.println(p1.getNome());
@@ -77,7 +77,7 @@ public class CorsoJava {
          */
         //Overload dei costruttori
         Persona p = new Persona("Mario", "Rossi");
-        p.denominazione();
+        System.out.println(p.denominazione());
         //Blocc static
         Static s1 = new Static();
         Static s2 = new Static();
