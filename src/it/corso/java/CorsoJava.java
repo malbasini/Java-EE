@@ -7,6 +7,8 @@ import it.corso.java.classi.*;
 import it.corso.java.array.*;
 import it.corso.java.stringhe.*;
 import it.corso.java.ereditarieta.*;
+import it.corso.java.ereditarieta.BClass;
+import it.corso.java.gerarchia.CClass;
 
 
 public class CorsoJava {
@@ -109,7 +111,12 @@ public class CorsoJava {
         /*Creo l'oggetto Studente */
         Studente studente = new Studente("Mario", "Rossi", 24, "Giurisprudenza", 2);
         System.out.println(studente.denominazione());
-        
+        BClass bc = new BClass();
+        bc.view();
+        System.out.println(bc.stringa);  
+        //Gerarchia di classi
+        CClass cc = new CClass("Primo", "Secondo", "Terzo");
+        System.out.println(cc.stringa + " " + cc.str + " " + cc.s); //Primo Secondo Terzo
     }
     
 }
