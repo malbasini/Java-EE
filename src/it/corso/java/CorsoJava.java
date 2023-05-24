@@ -113,10 +113,20 @@ public class CorsoJava {
         System.out.println(studente.denominazione());
         BClass bc = new BClass();
         bc.view();
-        System.out.println(bc.stringa);  
+        System.out.println(bc.stringa); 
+        EClass ec = new EClass();
+        DClass dc = new DClass();
+        ec = dc; 
+        /* Viene accettata l'assegnazione, ma si produce un errore
+         * se con la variabile reference ec andiamo a chiamare
+         * membri della sottoclasse.
+         */
+        ec.eMethod();
+        dc.dMethod();
         //Gerarchia di classi
         CClass cc = new CClass("Primo", "Secondo", "Terzo");
         System.out.println(cc.stringa + " " + cc.str + " " + cc.s); //Primo Secondo Terzo
+        
     }
     
 }
