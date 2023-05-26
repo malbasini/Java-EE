@@ -9,6 +9,7 @@ import it.corso.java.stringhe.*;
 import it.corso.java.ereditarieta.*;
 import it.corso.java.ereditarieta.BClass;
 import it.corso.java.gerarchia.CClass;
+import it.corso.java.polimorfismo.*;
 
 
 public class CorsoJava {
@@ -126,7 +127,14 @@ public class CorsoJava {
         //Gerarchia di classi
         CClass cc = new CClass("Primo", "Secondo", "Terzo");
         System.out.println(cc.stringa + " " + cc.str + " " + cc.s); //Primo Secondo Terzo
-        
+        //Polimorfismo
+        Animale a = new Insetto();
+        Animale b = new Mammifero();
+        a.myMethod();
+        b.myMethod();
+        Cane c = new Cane("Dick");
+        System.out.println(c.toString());
+    
     }
     
 }
