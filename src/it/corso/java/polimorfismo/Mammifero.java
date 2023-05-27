@@ -5,7 +5,7 @@ public class Mammifero extends Animale{
         System.out.println("Sto eseguendo myMethod della classe Mammifero.");
     }
 
-    public final void mangia(){
-        System.out.println("Sto eseguendo l'azione mangia della classe Mammifero.");
+    public void mangia(){
+        System.out.println("Sto eseguendo l'azione mangia.");
     }
 }
