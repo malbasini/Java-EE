@@ -127,7 +127,13 @@ public class CorsoJava {
         //Gerarchia di classi
         CClass cc = new CClass("Primo", "Secondo", "Terzo");
         System.out.println(cc.stringa + " " + cc.str + " " + cc.s); //Primo Secondo Terzo
-        //Polimorfismo
+        /*DEFINIZIONE DI POLIMORFISMO
+         * Consiste nella possibilità che una sottoclasse A di una data
+         * classe B ridefinisca uno dei metodi della super-classe e 
+         * che quindi quando verrà utilizzata una istanza della classe A
+         * le invocazioni al metodo ridefinito (spesso detto overridden) 
+         * eseguiranno il codice definito nella sotto-classe.
+         */
         Animale a = new Insetto();
         Animale b = new Mammifero();
         a.myMethod();
@@ -135,7 +141,14 @@ public class CorsoJava {
         Cane c = new Cane("Dick","Labrador");
         c.mangia();
         System.out.println(c.toString());
-    
+        Student s1 = new Student("Luca", "Verdi", 5);
+        Student s2 = new Student("Franco", "Bianchi", 4);
+        Teacher t1 = new Teacher("Maria","Rossi" ,"Matematica");
+        Teacher t2 = new Teacher("Marco","Albasini" ,"Storia");
+        Person[] array = {s1,s2,t1,t2};
+        for(Person x : array){
+            x.saluta();
+        }
     }
     
 }
