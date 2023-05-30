@@ -10,10 +10,29 @@ import it.corso.java.ereditarieta.*;
 import it.corso.java.ereditarieta.BClass;
 import it.corso.java.gerarchia.CClass;
 import it.corso.java.polimorfismo.*;
+import it.corso.java.record.MyRandom;
 
 
 public class CorsoJava {
+    record MyPerson(String nome, int annoNascita){}
+    record MyPerson1(String nome, int annoNascita, MyRandom casuale){}
 
+    record MyPerson3(String nome, int annoNascita){
+        public MyPerson3 (String nome, int annoNascita) {
+            this.nome = nome.toUpperCase();
+            this.annoNascita = annoNascita;
+        }
+    }
+
+    record MyPerson4(String nome, int annoNascita){
+        public MyPerson4 (String nome, int annoNascita) {
+            this.nome = nome.toUpperCase();
+            this.annoNascita = annoNascita;
+        }
+        public MyPerson4(int annoNascita){
+            this("Nessuno",annoNascita);
+        }
+    }
     public static void main(String[] args) {
         /*CorsoJava.variabili();
         CorsoJava.dataType();
@@ -21,8 +40,9 @@ public class CorsoJava {
         CorsoJava.controlloDiFlusso();
         CorsoJava.testClassi();
         CorsoJava.testArray();
-        CorsoJava.testStringhe();*/
-        CorsoJava.testEreditarieta();
+        CorsoJava.testStringhe();
+        CorsoJava.testEreditarieta();*/
+        CorsoJava.record();
     }
 
     public static void variabili(){
@@ -149,6 +169,38 @@ public class CorsoJava {
         for(Person x : array){
             x.saluta();
         }
+    }
+    public static void record(){
+        MyPerson p1 = new MyPerson("Susanna Verdi", 1982);
+        MyPerson p2 = new MyPerson("Mario Rossi",1990);
+        MyPerson p3 = new MyPerson("Mario Rossi",1990);
+        System.out.println(p1.nome() + " " + p1.annoNascita());
+        System.out.println(p2);
+        System.out.println(p2.equals(p3));
+        System.out.println(p3.hashCode() + " " + p2.hashCode());
+        System.out.println(p1.hashCode());
+
+        //SUPERFICIALMENTE IMMUTABILI
+        MyRandom mr1 = new MyRandom();
+        MyPerson1 p4 = new MyPerson1("Susanna Verdi",1982,mr1);
+        mr1.setValore();
+        System.out.println(p4.casuale.getValore());
+        mr1.setValore();
+        System.out.println(p4.casuale.getValore());
+
+        //CANONICAL CONSTRUCTOR
+
+        MyPerson3 p = new MyPerson3("Susanna Verdi",1982);
+        System.out.println(p);
+
+        //NON-CANONICAL CONSTRUCTOR
+
+        MyPerson4 p5 = new MyPerson4(1982);
+        System.out.println(p5);
+
+
+
+
     }
     
 }
