@@ -9,8 +9,8 @@ import it.corso.java.stringhe.*;
 import it.corso.java.ereditarieta.*;
 import it.corso.java.gerarchia.CClass;
 import it.corso.java.polimorfismo.*;
-import it.corso.java.record.MyPeople.*;
 import it.corso.java.record.MyRandom;
+import it.corso.java.record.Studenti.*;
 
 
 public class CorsoJava {
@@ -152,32 +152,32 @@ public class CorsoJava {
         }
     }
     public static void record(){
-        MyPerson p1 = new MyPerson("Susanna Verdi", 1982);
-        MyPerson p2 = new MyPerson("Mario Rossi",1990);
-        MyPerson p3 = new MyPerson("Mario Rossi",1990);
-        System.out.println(p1.nome() + " " + p1.annoNascita());
-        System.out.println(p2);
-        System.out.println(p2.equals(p3));
-        System.out.println(p3.hashCode() + " " + p2.hashCode());
-        System.out.println(p1.hashCode());
+        Studente1 s1 = new Studente1("Susanna Verdi", 1992);
+        Studente1 s2 = new Studente1("Mario Rossi",1990);
+        Studente1 s3 = new Studente1("Mario Rossi",1990);
+        System.out.println(s1.nome() + " " + s1.annoNascita());
+        System.out.println(s2);
+        System.out.println(s2.equals(s3));
+        System.out.println(s3.hashCode() + " " + s2.hashCode());
+        System.out.println(s1.hashCode());
 
         //SUPERFICIALMENTE IMMUTABILI
         MyRandom mr1 = new MyRandom();
-        MyPerson1 p4 = new MyPerson1("Susanna Verdi",1982,mr1);
+        Studente2 st2 = new Studente2("Susanna Verdi",1992,mr1);
         mr1.setValore();
-        System.out.println(p4.casuale().getValore());
+        System.out.println(st2.casuale().getValore());
         mr1.setValore();
-        System.out.println(p4.casuale().getValore());
+        System.out.println(st2.casuale().getValore());
 
         //CANONICAL CONSTRUCTOR
 
-        MyPerson3 p = new MyPerson3("Susanna Verdi",1982);
+        Studente3 p = new Studente3("Susanna Verdi",1992);
         System.out.println(p);
 
         //NON-CANONICAL CONSTRUCTOR
 
-        MyPerson4 p5 = new MyPerson4(1982);
-        System.out.println(p5);
+        Studente4 s5 = new Studente4(1992);
+        System.out.println(s5);
 
 
 
