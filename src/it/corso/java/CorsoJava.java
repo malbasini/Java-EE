@@ -7,32 +7,13 @@ import it.corso.java.classi.*;
 import it.corso.java.array.*;
 import it.corso.java.stringhe.*;
 import it.corso.java.ereditarieta.*;
-import it.corso.java.ereditarieta.BClass;
 import it.corso.java.gerarchia.CClass;
 import it.corso.java.polimorfismo.*;
+import it.corso.java.record.MyPeople.*;
 import it.corso.java.record.MyRandom;
 
 
 public class CorsoJava {
-    record MyPerson(String nome, int annoNascita){}
-    record MyPerson1(String nome, int annoNascita, MyRandom casuale){}
-
-    record MyPerson3(String nome, int annoNascita){
-        public MyPerson3 (String nome, int annoNascita) {
-            this.nome = nome.toUpperCase();
-            this.annoNascita = annoNascita;
-        }
-    }
-
-    record MyPerson4(String nome, int annoNascita){
-        public MyPerson4 (String nome, int annoNascita) {
-            this.nome = nome.toUpperCase();
-            this.annoNascita = annoNascita;
-        }
-        public MyPerson4(int annoNascita){
-            this("Nessuno",annoNascita);
-        }
-    }
     public static void main(String[] args) {
         /*CorsoJava.variabili();
         CorsoJava.dataType();
@@ -184,9 +165,9 @@ public class CorsoJava {
         MyRandom mr1 = new MyRandom();
         MyPerson1 p4 = new MyPerson1("Susanna Verdi",1982,mr1);
         mr1.setValore();
-        System.out.println(p4.casuale.getValore());
+        System.out.println(p4.casuale().getValore());
         mr1.setValore();
-        System.out.println(p4.casuale.getValore());
+        System.out.println(p4.casuale().getValore());
 
         //CANONICAL CONSTRUCTOR
 
