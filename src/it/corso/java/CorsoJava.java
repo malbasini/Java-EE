@@ -1,4 +1,5 @@
 package it.corso.java;
+import it.corso.java.interfacce.*;
 import it.corso.java.variabili.*;
 import it.corso.java.datatype.*;
 import it.corso.java.operatori.*;
@@ -12,7 +13,6 @@ import it.corso.java.polimorfismo.*;
 import it.corso.java.record.MyRandom;
 import it.corso.java.record.Studenti.*;
 
-
 public class CorsoJava {
     public static void main(String[] args) {
         /*CorsoJava.variabili();
@@ -22,8 +22,9 @@ public class CorsoJava {
         CorsoJava.testClassi();
         CorsoJava.testArray();
         CorsoJava.testStringhe();
-        CorsoJava.testEreditarieta();*/
-        CorsoJava.record();
+        CorsoJava.testEreditarieta();
+        CorsoJava.record();*/
+        CorsoJava.interfacce();
     }
 
     public static void variabili(){
@@ -178,10 +179,15 @@ public class CorsoJava {
 
         Studente4 s5 = new Studente4(1992);
         System.out.println(s5);
+    }
 
-
-
-
+    public static void interfacce(){
+        IMyInterface i = new FClass();
+        /*--Invoco myMethod implementato in AClass*/
+        i.myMethod();
+        /*--Disaccoppiamento tra le classi FClass e GClass passando la interface
+        * nel costruttore di GClass*/
+        GClass g = new GClass(i);
     }
     
 }
