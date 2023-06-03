@@ -188,6 +188,24 @@ public class CorsoJava {
         /*--Disaccoppiamento tra le classi FClass e GClass passando la interface
         * nel costruttore di GClass*/
         GClass g = new GClass(i);
+        //IMPLEMENTAZIONI MULTIPLE DI INTERFACE E POLIMORFISMO
+        HClass hc = new HClass();
+        IClass ic = new IClass();
+        IMyInterface1 i1 = new HClass();
+        i1.myMethod1();
+        //ERRORE DEL COMPILATORE IClass NON IMPLEMENTA IMyInterface1.
+        //IMyInterface1 i2 = new IClass();
+        IMyInterface2[] i2 = {hc,ic};
+        for(IMyInterface2 x: i2){
+            x.myMethod2();
+        }
+        //EREDITARIETA' TRA INTERFACE
+        LClass lc = new LClass();
+        IMyInterface3 i3 = lc;
+        IMyInterface4 i4 = lc;
+        i3.myMethod3();
+        i4.myMethod3();
+        i4.myMethod4();
     }
     
 }
