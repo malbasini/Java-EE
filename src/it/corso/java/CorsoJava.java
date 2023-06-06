@@ -12,6 +12,7 @@ import it.corso.java.gerarchia.CClass;
 import it.corso.java.polimorfismo.*;
 import it.corso.java.record.MyRandom;
 import it.corso.java.record.Studenti.*;
+import it.corso.java.enumerazioni.Enumerazioni.*;
 
 public class CorsoJava {
     public static void main(String[] args) {
@@ -23,8 +24,18 @@ public class CorsoJava {
         CorsoJava.testArray();
         CorsoJava.testStringhe();
         CorsoJava.testEreditarieta();
-        CorsoJava.record();*/
-        CorsoJava.interfacce();
+        CorsoJava.record();
+        CorsoJava.interfacce();*/
+        CorsoJava.Enumerazioni();
+    }
+
+    private static void Enumerazioni() {
+        //SCHEMA ORDINALE
+        GiorniDellaSettimana g = GiorniDellaSettimana.GIOVEDI;
+        int v = g.ordinal();
+        int pos = g.compareTo(GiorniDellaSettimana.VENERDI);
+        System.out.println(v);
+        System.out.println(pos);
     }
 
     public static void variabili(){
