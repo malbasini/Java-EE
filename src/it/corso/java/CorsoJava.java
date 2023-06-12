@@ -11,11 +11,12 @@ import it.corso.java.ereditarieta.*;
 import it.corso.java.gerarchia.CClass;
 import it.corso.java.polimorfismo.*;
 import it.corso.java.record.MyRandom;
-import it.corso.java.record.Studenti.*;
+import it.corso.java.record.Studenti.Studente1;
+import it.corso.java.record.Studenti.Studente2;
+import it.corso.java.record.Studenti.Studente3;
+import it.corso.java.record.Studenti.Studente4;
 import it.corso.java.enumerazioni.Enumerazioni.*;
 import it.corso.java.eccezioni.*;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class CorsoJava {
