@@ -13,6 +13,10 @@ import it.corso.java.polimorfismo.*;
 import it.corso.java.record.MyRandom;
 import it.corso.java.record.Studenti.*;
 import it.corso.java.enumerazioni.Enumerazioni.*;
+import it.corso.java.eccezioni.*;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class CorsoJava {
     public static void main(String[] args) {
@@ -25,15 +29,16 @@ public class CorsoJava {
         CorsoJava.testStringhe();
         CorsoJava.testEreditarieta();
         CorsoJava.record();
-        CorsoJava.interfacce();*/
-        CorsoJava.Enumerazioni();
+        CorsoJava.interfacce();
+        CorsoJava.Enumerazioni();*/
+        CorsoJava.LeggiFile();
     }
 
     private static void Enumerazioni() {
         //SCHEMA ORDINALE
         GiorniDellaSettimana g = GiorniDellaSettimana.GIOVEDI;
         int v = g.ordinal();
-        int pos = g.compareTo(GiorniDellaSettimana.VENERDI);
+        int pos = g.compareTo(GiorniDellaSettimana.GIOVEDI);
         System.out.println(v);
         System.out.println(pos);
     }
@@ -218,5 +223,17 @@ public class CorsoJava {
         i4.myMethod3();
         i4.myMethod4();
     }
-    
+
+    public static void LeggiFile(){
+        try
+        {
+             ReadFile.ReadTextFile();
+        }
+        catch(IOException e){
+            System.out.println("Si è verificata la seguente eccezione " + e.getMessage());
+
+        }
+    }
+
+
 }
