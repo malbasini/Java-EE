@@ -16,6 +16,7 @@ import it.corso.java.record.Studenti.Studente2;
 import it.corso.java.record.Studenti.Studente3;
 import it.corso.java.record.Studenti.Studente4;
 import it.corso.java.enumerazioni.Enumerazioni.*;
+import it.corso.java.generics.*;
 import it.corso.java.eccezioni.*;
 import java.io.IOException;
 
@@ -31,8 +32,9 @@ public class CorsoJava {
         CorsoJava.testEreditarieta();
         CorsoJava.record();
         CorsoJava.interfacce();
-        CorsoJava.Enumerazioni();*/
-        CorsoJava.LeggiFile();
+        CorsoJava.Enumerazioni();
+        CorsoJava.LeggiFile();*/
+        CorsoJava.Generics();
     }
 
     private static void Enumerazioni() {
@@ -235,6 +237,10 @@ public class CorsoJava {
 
         }
     }
-
-
+    public static void Generics(){
+        Bottiglia<Acqua> contenuto1 = new Bottiglia<>(new Acqua());
+        System.out.println(contenuto1.getContenuto());
+        Bottiglia<Vino> contenuto2 = new Bottiglia<>(new Vino());
+        System.out.println(contenuto2.getContenuto());
+    }
 }
