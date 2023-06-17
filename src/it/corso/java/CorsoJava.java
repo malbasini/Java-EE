@@ -242,5 +242,17 @@ public class CorsoJava {
         System.out.println(contenuto1.getContenuto());
         Bottiglia<Vino> contenuto2 = new Bottiglia<>(new Vino());
         System.out.println(contenuto2.getContenuto());
+        //METODI GENERICI
+        Double d;
+        d = MyGenerics.squareRoot(144.0);
+        System.out.println("La radice quadrata di 144.0 è " + d.doubleValue());
+        d = MyGenerics.squareRoot((int)16);
+        System.out.println("La radice quadrata di 16 è " + d.intValue());
+        //INTERFACE GENERICHE
+        IMyGenericInterface i = new MyGenericClass();
+        double x = i.Pow(2.0,3.0);
+        System.out.println("La potenza di 2^3 è " + (int)x);
+        x = i.Pow(10.0,3.0);
+        System.out.println("La potenza di 10^3 è " + (int)x);
     }
 }
