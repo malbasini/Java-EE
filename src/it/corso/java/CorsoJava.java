@@ -250,9 +250,11 @@ public class CorsoJava {
         System.out.println("La radice quadrata di 16 è " + d.intValue());
         //INTERFACE GENERICHE
         IMyGenericInterface i = new MyGenericClass();
-        double x = i.Pow(2.0,3.0);
-        System.out.println("La potenza di 2^3 è " + (int)x);
+        double x = i.Pow(2.0,3.0).doubleValue();
+        System.out.println("La potenza di 2^3 è " + x);
         x = i.Pow(10.0,3.0);
         System.out.println("La potenza di 10^3 è " + (int)x);
+        x = i.Pow(3.0,4.0);
+        System.out.println("La potenza di 3^4 è " + (byte)x);
     }
 }
