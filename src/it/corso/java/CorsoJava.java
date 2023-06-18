@@ -16,9 +16,11 @@ import it.corso.java.record.Studenti.Studente2;
 import it.corso.java.record.Studenti.Studente3;
 import it.corso.java.record.Studenti.Studente4;
 import it.corso.java.enumerazioni.Enumerazioni.*;
+import it.corso.java.lambda.*;
 import it.corso.java.generics.*;
 import it.corso.java.eccezioni.*;
 import java.io.IOException;
+import java.util.*;
 
 public class CorsoJava {
     public static void main(String[] args) {
@@ -33,8 +35,9 @@ public class CorsoJava {
         CorsoJava.record();
         CorsoJava.interfacce();
         CorsoJava.Enumerazioni();
-        CorsoJava.LeggiFile();*/
-        CorsoJava.Generics();
+        CorsoJava.LeggiFile();
+        CorsoJava.Generics();*/
+        CorsoJava.lambda();
     }
 
     private static void Enumerazioni() {
@@ -256,5 +259,9 @@ public class CorsoJava {
         System.out.println("La potenza di 10^3 è " + (int)x);
         x = i.Pow(3.0,4.0);
         System.out.println("La potenza di 3^4 è " + (byte)x);
+    }
+
+    public static void lambda(){
+        MyLambdaClass.sortArray();
     }
 }
