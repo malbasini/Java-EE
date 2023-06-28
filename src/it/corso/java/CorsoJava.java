@@ -1,5 +1,7 @@
 package it.corso.java;
 import it.corso.java.interfacce.*;
+import it.corso.java.thread.MyRunnable;
+import it.corso.java.thread.MyThread;
 import it.corso.java.variabili.*;
 import it.corso.java.datatype.*;
 import it.corso.java.operatori.*;
@@ -16,11 +18,11 @@ import it.corso.java.record.Studenti.Studente2;
 import it.corso.java.record.Studenti.Studente3;
 import it.corso.java.record.Studenti.Studente4;
 import it.corso.java.enumerazioni.Enumerazioni.*;
+import it.corso.java.thread.*;
 import it.corso.java.lambda.*;
 import it.corso.java.generics.*;
 import it.corso.java.eccezioni.*;
 import java.io.IOException;
-import java.util.*;
 
 public class CorsoJava {
     public static void main(String[] args) {
@@ -36,8 +38,9 @@ public class CorsoJava {
         CorsoJava.interfacce();
         CorsoJava.Enumerazioni();
         CorsoJava.LeggiFile();
-        CorsoJava.Generics();*/
-        CorsoJava.lambda();
+        CorsoJava.Generics();
+        CorsoJava.lambda();*/
+        CorsoJava.thread();
     }
 
     private static void Enumerazioni() {
@@ -263,5 +266,13 @@ public class CorsoJava {
 
     public static void lambda(){
         MyLambdaClass.sortArray();
+    }
+
+    public static void thread()
+    {
+        MyThread t1 = new MyThread();
+        t1.start();
+        Thread t2 = new Thread(new MyRunnable());
+        t2.start();
     }
 }
