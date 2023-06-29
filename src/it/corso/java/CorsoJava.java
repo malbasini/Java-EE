@@ -1,5 +1,7 @@
 package it.corso.java;
 import it.corso.java.interfacce.*;
+import it.corso.java.multithreading.ThreadDemo;
+import it.corso.java.syncronized.Cliente;
 import it.corso.java.thread.MyRunnable;
 import it.corso.java.thread.MyThread;
 import it.corso.java.variabili.*;
@@ -22,6 +24,9 @@ import it.corso.java.thread.*;
 import it.corso.java.lambda.*;
 import it.corso.java.generics.*;
 import it.corso.java.eccezioni.*;
+import it.corso.java.multithreading.*;
+import it.corso.java.syncronized.*;
+import it.corso.java.concorrenza.*;
 import java.io.IOException;
 
 public class CorsoJava {
@@ -274,5 +279,58 @@ public class CorsoJava {
         t1.start();
         Thread t2 = new Thread(new MyRunnable());
         t2.start();
+        try {
+            Cliente c1 = new Cliente("Mario", 1200);
+            Cliente c2 = new Cliente("Lucia", 50);
+            // Avvio i Threads
+            c1.start();
+            c2.start();
+
+            // Attendo il completamento
+            c1.join();
+            c2.join();
+        }
+        catch (InterruptedException e){
+            String a = e .getMessage();
+            System.out.println(a);
+        }
+        try {
+            /* creiamo 5 istanze dello stesso oggetto */
+            ThreadDemo thread1 = new ThreadDemo("Thread-1");
+            ThreadDemo thread2 = new ThreadDemo("Thread-2");
+            ThreadDemo thread3 = new ThreadDemo("Thread-3");
+            ThreadDemo thread4 = new ThreadDemo("Thread-4");
+            ThreadDemo thread5 = new ThreadDemo("Thread-5");
+            /* avviamo i 5 thread */
+            thread1.start();
+            thread2.start();
+            thread3.start();
+            thread4.start();
+            thread5.start();
+        }
+        catch (InterruptedException e){
+            String a = e .getMessage();
+            System.out.println(a);
+        }
+        try {
+            GetSitePageThread sito1 = new GetSitePageThread("https://www.marcoalbasini.com");
+            GetSitePageThread sito2 = new GetSitePageThread("https://www.google.it");
+            // Avvio i Threads
+            sito1.start();
+            sito2.start();
+            // Attendo il completamento
+            sito1.join();
+            sito2.join();
+            // Recupera risultato
+            String outSito1 = sito1.getContent();
+            String outSito2 = sito2.getContent();
+            System.out.println(outSito1);
+            System.out.println("-------------------------------------------------------------------------------------");
+            System.out.println(outSito2);
+        }
+        catch (InterruptedException e){
+            String a = e .getMessage();
+            System.out.println(a);
+        }
     }
 }
