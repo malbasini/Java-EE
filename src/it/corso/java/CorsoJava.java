@@ -1,7 +1,9 @@
 package it.corso.java;
 import it.corso.java.interfacce.*;
-import it.corso.java.multithreading.ThreadDemo;
-import it.corso.java.syncronized.Cliente;
+import it.corso.java.thread.lock.Contatore;
+import it.corso.java.thread.lock.ReentrantLockEsempio;
+import it.corso.java.thread.multithreading.ThreadDemo;
+import it.corso.java.thread.syncronized.Cliente;
 import it.corso.java.thread.MyRunnable;
 import it.corso.java.thread.MyThread;
 import it.corso.java.variabili.*;
@@ -20,14 +22,15 @@ import it.corso.java.record.Studenti.Studente2;
 import it.corso.java.record.Studenti.Studente3;
 import it.corso.java.record.Studenti.Studente4;
 import it.corso.java.enumerazioni.Enumerazioni.*;
-import it.corso.java.thread.*;
 import it.corso.java.lambda.*;
 import it.corso.java.generics.*;
 import it.corso.java.eccezioni.*;
-import it.corso.java.multithreading.*;
-import it.corso.java.syncronized.*;
-import it.corso.java.concorrenza.*;
+import it.corso.java.thread.concorrenza.*;
+import it.corso.java.thread.lock.*;
+import it.corso.java.thread.prodcons.*;
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CorsoJava {
     public static void main(String[] args) {
@@ -332,5 +335,20 @@ public class CorsoJava {
             String a = e .getMessage();
             System.out.println(a);
         }
+        //LOCK
+        ReentrantLockEsempio counter = new ReentrantLockEsempio();
+        Contatore c1 = new Contatore(counter, 20, 500);
+        Contatore c2 = new Contatore(counter, 20, 500);
+        c1.start();
+        c2.start();
+        //PRODUCER CONSUMER
+        List<Integer> bufferCondiviso = new LinkedList<Integer>();
+        int size = 4;
+        Thread prodThread = new Thread(new Producer(bufferCondiviso, size), "Producer");
+        Thread consThread = new Thread(new Consumer(bufferCondiviso, size), "Consumer");
+        prodThread.start();
+        consThread.start();
     }
+
+
 }

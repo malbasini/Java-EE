@@ -1,4 +1,4 @@
-package it.corso.java.syncronized;
+package it.corso.java.thread.syncronized;
 public class Cliente extends Thread {
     private double sommaDaPrelevare;
     public Cliente(String nomeCliente, double sommaDaPrelevare) {

@@ -1,4 +1,4 @@
-package it.corso.java.syncronized;
+package it.corso.java.thread.syncronized;
 
 import java.io.*;
 

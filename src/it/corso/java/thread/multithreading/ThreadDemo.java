@@ -1,4 +1,4 @@
-package it.corso.java.multithreading;
+package it.corso.java.thread.multithreading;
 
 public class ThreadDemo extends Thread{
     private Thread t;

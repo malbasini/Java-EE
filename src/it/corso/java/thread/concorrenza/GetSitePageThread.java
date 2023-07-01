@@ -1,4 +1,4 @@
-package it.corso.java.concorrenza;
+package it.corso.java.thread.concorrenza;
 import it.corso.java.Utils;
 import java.io.IOException;
 import java.io.InputStream;
