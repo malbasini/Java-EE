@@ -48,7 +48,7 @@ public class CorsoJava {
         CorsoJava.LeggiFile();
         CorsoJava.Generics();
         CorsoJava.lambda();
-        //CorsoJava.thread();
+        CorsoJava.thread();
     }
 
     private static void Enumerazioni() {
