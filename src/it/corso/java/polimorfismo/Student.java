@@ -12,6 +12,6 @@ public class Student extends Person {
          this.anno = anno;
     }
     public void saluta(){
-        System.out.println("Buongiorno prof un saluto da " + this.nome + " " + this.cognome);
+        System.out.println("Buongiorno prof un saluto da " + this.nome + " " + this.cognome + " al " + this.anno + " anno.");
     }
 }

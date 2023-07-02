@@ -31,10 +31,10 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-
+@SuppressWarnings("all")
 public class CorsoJava {
     public static void main(String[] args) {
-        /*CorsoJava.variabili();
+        CorsoJava.variabili();
         CorsoJava.dataType();
         CorsoJava.operatori();
         CorsoJava.controlloDiFlusso();
@@ -47,8 +47,8 @@ public class CorsoJava {
         CorsoJava.Enumerazioni();
         CorsoJava.LeggiFile();
         CorsoJava.Generics();
-        CorsoJava.lambda();*/
-        CorsoJava.thread();
+        CorsoJava.lambda();
+        //CorsoJava.thread();
     }
 
     private static void Enumerazioni() {
@@ -251,6 +251,7 @@ public class CorsoJava {
 
         }
     }
+    
     public static void Generics(){
         Bottiglia<Acqua> contenuto1 = new Bottiglia<>(new Acqua());
         System.out.println(contenuto1.getContenuto());

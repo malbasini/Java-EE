@@ -12,6 +12,6 @@ public class Teacher extends Person {
          this.materia = materia;
     }
     public void saluta(){
-        System.out.println("Buongiorno ragazzi un saluto da " + this.nome + " " + this.cognome);
+        System.out.println("Buongiorno ragazzi un saluto da " + this.nome + " " + this.cognome + " vi insegnerò la materia " + this.materia);
     }
 }

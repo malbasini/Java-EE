@@ -1,5 +1,6 @@
-package it.corso.java.generics;
 
+package it.corso.java.generics;
+@SuppressWarnings("unused")
 public class MyGenerics<T extends Number> {
     private T t;
     public MyGenerics(T t){

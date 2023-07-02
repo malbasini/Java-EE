@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Consumer implements Runnable {
     private final List<Integer> bufferCondiviso;
-    private int i = 0;
     public Consumer(List<Integer> bufferCondiviso, int size) {
         this.bufferCondiviso = bufferCondiviso;
     }

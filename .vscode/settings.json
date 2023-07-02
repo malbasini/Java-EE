@@ -4,5 +4,8 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ],
-    "java.dependency.packagePresentation": "flat"
+    "java.dependency.packagePresentation": "flat",
+    "files.exclude": {
+        "**/.settings": false
+      }
 }
