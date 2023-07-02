@@ -26,18 +26,10 @@ import it.corso.java.lambda.*;
 import it.corso.java.generics.*;
 import it.corso.java.eccezioni.*;
 import it.corso.java.thread.concorrenza.*;
-import it.corso.java.thread.lock.*;
 import it.corso.java.thread.prodcons.*;
 import java.io.IOException;
 import java.util.LinkedList;
-import it.corso.java.thread.queue.*;
-import it.corso.java.thread.threadpool.*;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 
 
 public class CorsoJava {
