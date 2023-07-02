@@ -316,7 +316,7 @@ public class CorsoJava {
             System.out.println(a);
         }
         try {
-            GetSitePageThread sito1 = new GetSitePageThread("https://www.marcoalbasini.com");
+            GetSitePageThread sito1 = new GetSitePageThread("https://www.bing.com");
             GetSitePageThread sito2 = new GetSitePageThread("https://www.google.it");
             // Avvio i Threads
             sito1.start();
