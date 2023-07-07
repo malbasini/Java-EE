@@ -1,6 +1,4 @@
 package it.corso.java.liste;
-
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class MyHashMap {
