@@ -30,6 +30,7 @@ import it.corso.java.thread.prodcons.*;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import it.corso.java.liste.*;
 
 @SuppressWarnings("all")
 public class CorsoJava {
@@ -48,7 +49,8 @@ public class CorsoJava {
         CorsoJava.LeggiFile();
         CorsoJava.Generics();
         CorsoJava.lambda();
-        CorsoJava.thread();
+        //CorsoJava.thread();
+        CorsoJava.liste();
     }
 
     private static void Enumerazioni() {
@@ -350,6 +352,11 @@ public class CorsoJava {
         prodThread.start();
         consThread.start();
 
+    }
+
+    public static void liste(){
+        MyArrayList.myTestMethodArrayList();
+        MyHashMap.myTestMethodHashMap();
     }
 
 
