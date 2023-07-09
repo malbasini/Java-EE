@@ -361,7 +361,12 @@ public class CorsoJava {
         MyHashMap.myTestMethodHashMap();
     }
     public static void gestioneFile(){
-        TestFileClass.create();
+        try{
+            TestFileClass.create();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
         WriteClassFile.write();
         ReadClassFile.read();
     }
