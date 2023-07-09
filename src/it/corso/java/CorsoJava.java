@@ -27,6 +27,7 @@ import it.corso.java.generics.*;
 import it.corso.java.eccezioni.*;
 import it.corso.java.thread.concorrenza.*;
 import it.corso.java.thread.prodcons.*;
+import it.corso.java.gestionefile.*;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -50,6 +51,7 @@ public class CorsoJava {
         CorsoJava.Generics();
         CorsoJava.lambda();
         CorsoJava.liste();
+        CorsoJava.gestioneFile();
         //CorsoJava.thread();
     }
 
@@ -358,6 +360,9 @@ public class CorsoJava {
         MyArrayList.myTestMethodArrayList();
         MyHashMap.myTestMethodHashMap();
     }
-
-
+    public static void gestioneFile(){
+        TestFileClass.create();
+        WriteClassFile.write();
+        ReadClassFile.read();
+    }
 }
