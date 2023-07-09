@@ -51,7 +51,13 @@ public class CorsoJava {
         CorsoJava.Generics();
         CorsoJava.lambda();
         CorsoJava.liste();
-        CorsoJava.gestioneFile();
+        try
+        {
+           CorsoJava.gestioneFile();
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
         //CorsoJava.thread();
     }
 
@@ -360,12 +366,18 @@ public class CorsoJava {
         MyArrayList.myTestMethodArrayList();
         MyHashMap.myTestMethodHashMap();
     }
-    public static void gestioneFile(){
+    public static void gestioneFile() throws InterruptedException{
         try{
             TestFileClass.create();
         }
         catch(IOException e){
             e.printStackTrace();
+        }
+        try{    
+           Thread.sleep(2000);
+        }
+        catch(InterruptedException d){
+            d.printStackTrace();
         }
         WriteClassFile.write();
         ReadClassFile.read();
