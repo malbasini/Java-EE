@@ -72,7 +72,7 @@ public class Clienti {
             dataSource.setServerName("127.0.0.1");
             dataSource.setPortNumber(3307);
             dataSource.setUser("root");//root
-            dataSource.setPassword("KHJuial0a31?");//pwd di MySQL
+            dataSource.setPassword("**************");//pwd di MySQL
             dataSource.setDatabaseName("CorsoJava");
             connection = dataSource.getConnection();
         }
