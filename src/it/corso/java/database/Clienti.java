@@ -1,18 +1,10 @@
 package it.corso.java.database;
-
-import com.mysql.cj.MysqlConnection;
-import com.mysql.cj.Session;
-import com.mysql.cj.conf.PropertySet;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.jdbc.MysqlDataSource;
-import com.mysql.cj.protocol.ServerSessionStateController;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Properties;
 
 public class Clienti {
 
