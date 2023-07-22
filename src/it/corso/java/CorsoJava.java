@@ -120,7 +120,7 @@ public class CorsoJava {
         //Overload dei costruttori
         Persona p = new Persona("Mario", "Rossi");
         System.out.println(p.denominazione());
-        //Blocc static
+        //Blocco static
         Static s1 = new Static();
         Static s2 = new Static();
         s1.view();
