@@ -52,7 +52,7 @@ public class CorsoJava {
         CorsoJava.lambda();
         CorsoJava.liste();
         CorsoJava.gestioneFile();
-        //CorsoJava.thread();
+        CorsoJava.thread();
     }
 
     private static void Enumerazioni() {
